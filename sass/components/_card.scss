@@ -14,8 +14,8 @@
         left: 0;
         width: 100%;
         backface-visibility: hidden;
-        border-radius: 3px;
-        overflow: hidden; //hiddes image part that overflows to maintain border-radius
+        border-radius: $border-radius-sm;
+        overflow: hidden; //hides image part that overflows to maintain border-radius
         box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
 
         &--front {
