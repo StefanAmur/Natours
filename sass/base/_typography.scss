@@ -8,6 +8,7 @@ body {
 .heading-primary {
     color: $color-white;
     text-transform: uppercase;
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden; /* stops h1 text from jumping slightly upwards */
     margin-bottom: 6rem;
 
