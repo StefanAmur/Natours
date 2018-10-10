@@ -9,7 +9,7 @@
 
     @include respond(tab-port) {
         padding: 20rem 0;
-        margin-top: -10vh;
+        margin-top: -14vh;
     }
 }
 
@@ -53,6 +53,7 @@
     padding: 15rem 0;
 
     @include respond(tab-port) {
+        background-color: rgba(153, 153, 153, 0.22);
         padding: 10rem 0;
     }
 }

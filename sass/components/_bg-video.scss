@@ -8,6 +8,11 @@
     opacity: .24;
     overflow: hidden;
 
+    @include respond(phone) {
+        display: none;
+        background-color: rgba(153, 153, 153, 0.21);
+    }
+
     &__content {
         height: 100%;
         width: 100%;

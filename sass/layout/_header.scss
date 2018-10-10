@@ -27,8 +27,8 @@
     }
 
     @include respond(tab-land) {
-        -webkit-clip-path: polygon(0 0, 100% 0, 100% 84vh, 0 100%);
-        clip-path: polygon(0 0, 100% 0, 100% 84vh, 0 100%);
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 88vh, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 88vh, 0 100%);
     }
 
     &__logo-box {
