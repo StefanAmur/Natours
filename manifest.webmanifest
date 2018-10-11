@@ -1,0 +1,21 @@
+{
+    "short_name": "Natours",
+    "name": "Natours",
+    "icons": [
+        {
+            "src": "img/favicon192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+
+        {
+            "src": "img/favicon512.png",
+            "sizes": "512x512",
+            "type": "image.png"
+        }
+    ],
+    "start_url" : "/?utm_source=homescreen",
+    "background_color": "#55c57a",
+    "Theme_color": "#c5557a",
+    "display": "standalone"
+}
