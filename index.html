@@ -13,7 +13,7 @@
         <link rel="shortcut icon" type="image/png" href="img/favicon.png">
         
         <title>Natours | Exciting tours for adventurous people</title>
-        <link rel="manifest" href="/manifest.webmanifest">
+        <link rel="manifest" href="manifest.webmanifest">
     </head>
     <body>
 
@@ -441,6 +441,21 @@
                 </div>
             </div>
         </div>
+
+
+        <script>
+            if ('serviceWorker' in navigator) {
+              console.log("Will the service worker register?");
+              navigator.serviceWorker.register('service-worker.js')
+                .then(function(reg){
+                  console.log("Yes, it did.");
+                }).catch(function(err) {
+                  console.log("No it didn't. This happened: ", err)
+                });
+            }
+          </script>
+
+          
 
         <!--
         <section class="grid-test">

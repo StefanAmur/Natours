@@ -16,6 +16,6 @@
     ],
     "start_url" : "/?utm_source=homescreen",
     "background_color": "#55c57a",
-    "Theme_color": "#c5557a",
+    "theme_color": "#c5557a",
     "display": "standalone"
 }
