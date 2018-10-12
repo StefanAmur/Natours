@@ -1,25 +1,8 @@
 const cacheName = "v1";
 
-const cacheAssets = [
-    "index.html",
-    "/css/style.css",
-    "img",
-    "service-worker.js" 
-]
-
 // Call Install Event
 self.addEventListener("install", (e) => {
     console.log("Service Worker: Installed");
-
-    e.waitUntil(
-        caches
-            .open(cacheName)
-            .then(cache => {
-                console.log("Service Worker: Caching files");
-                cache.addAll(cacheAssets);
-            })
-            .then(() => self.skipWaiting())
-    );
 });
 
 //Call Activate Event
@@ -44,5 +27,18 @@ self.addEventListener("activate", (e) => {
 self.addEventListener("fetch", e => {
     console.log("Service Worker: Fetching");
     e.respondWith(
-        fetch(e.request).catch(() => caches.match(e.request)));
+        fetch(e.request)
+        .then(res => {
+            //Make copy/clone of response
+            const resClone = res.clone();
+            //Open a cache
+            caches
+            .open(cacheName)
+            .then(cache => {
+                //Add the response to the cache
+                cache.put(e.request, resClone);
+            });
+            return res;
+        }).catch(err => caches.match(e.request).then(res => res))
+    );
 });
